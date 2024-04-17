@@ -6,9 +6,9 @@ import { CamperDetails } from './CamperDetails/CamperDetails';
 import { CamperFeatures } from './CamperFeatures/CamperFeatures';
 import { CamperReviews } from './CamperReviews/CamperReviews';
 
-const { Home } = lazy(() => import('../pages/Home'));
-const { CamperList } = lazy(() => import('../pages/CamperList'));
-const { Favorites } = lazy(() => import('../pages/Favorites'));
+const Home = lazy(() => import('../pages/Home'));
+const CamperList = lazy(() => import('../pages/CamperList'));
+const Favorites = lazy(() => import('../pages/Favorites'));
 
 export const App = () => {
   return (

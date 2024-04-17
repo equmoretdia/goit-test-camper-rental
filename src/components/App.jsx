@@ -7,7 +7,7 @@ import { CamperFeatures } from './CamperFeatures/CamperFeatures';
 import { CamperReviews } from './CamperReviews/CamperReviews';
 
 const Home = lazy(() => import('../pages/Home'));
-const CamperList = lazy(() => import('../pages/CamperList'));
+const Catalog = lazy(() => import('../pages/Catalog'));
 const Favorites = lazy(() => import('../pages/Favorites'));
 
 export const App = () => {
@@ -15,7 +15,7 @@ export const App = () => {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
-        <Route path="catalog" element={<CamperList />} />
+        <Route path="catalog" element={<Catalog />} />
         <Route path="catalog/:catalogId" element={<CamperDetails />}>
           <Route path="features" element={<CamperFeatures />} />
           <Route path="reviews" element={<CamperReviews />} />

@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/goit-test-camper-rental/static/css/main.3a48d259.css",
+    "main.js": "/goit-test-camper-rental/static/js/main.07d3183d.js",
+    "index.html": "/goit-test-camper-rental/index.html",
+    "main.3a48d259.css.map": "/goit-test-camper-rental/static/css/main.3a48d259.css.map",
+    "main.07d3183d.js.map": "/goit-test-camper-rental/static/js/main.07d3183d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3a48d259.css",
+    "static/js/main.07d3183d.js"
+  ]
+}

@@ -15,6 +15,12 @@ export const CamperCard = ({
   details,
   photo,
   reviews,
+  form,
+  length,
+  width,
+  height,
+  tank,
+  consumption,
 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const toggleModal = () => setIsModalOpen(state => !state);
@@ -41,8 +47,11 @@ export const CamperCard = ({
           <p>{description}</p>
           <ul>
             {Object.entries(details).map(([key, value]) => {
-              if (typeof value === 'number' && value === 0) {
-                return null; // Skip rendering if the value is 0
+              if (
+                (typeof value === 'number' && value === 0) ||
+                (typeof value === 'string' && value.trim() === '')
+              ) {
+                return null;
               }
               return (
                 <li key={key}>
@@ -77,6 +86,12 @@ export const CamperCard = ({
             details={details}
             photo={photo}
             reviews={reviews}
+            form={form}
+            length={length}
+            width={width}
+            height={height}
+            tank={tank}
+            consumption={consumption}
           />
         </Modal>
       )}

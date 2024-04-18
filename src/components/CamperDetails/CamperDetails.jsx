@@ -9,9 +9,19 @@ export const CamperDetails = ({
   price,
   rating,
   location,
+  adults,
+  engine,
+  transmission,
   description,
+  details,
   photo,
   reviews,
+  form,
+  length,
+  width,
+  height,
+  tank,
+  consumption,
 }) => {
   const [showFeatures, setShowFeatures] = useState(false);
   const [showReviews, setShowReviews] = useState(false);
@@ -35,23 +45,29 @@ export const CamperDetails = ({
         <p>{location}</p>
       </div>
       <p>{price}</p>
-      <div style={{ display: 'flex' }}>
-        <img
-          alt={`camper: ${name}`}
-          src={photo[0]}
-          style={{ width: 290, height: 310 }}
-        />
-        <img
-          alt={`camper: ${name}`}
-          src={photo[1]}
-          style={{ width: 290, height: 310 }}
-        />
-        <img
-          alt={`camper: ${name}`}
-          src={photo[2]}
-          style={{ width: 290, height: 310 }}
-        />
-      </div>
+      <ul style={{ display: 'flex' }}>
+        <li>
+          <img
+            alt={`camper: ${name}`}
+            src={photo[0]}
+            style={{ width: 290, height: 310 }}
+          />
+        </li>
+        <li>
+          <img
+            alt={`camper: ${name}`}
+            src={photo[1]}
+            style={{ width: 290, height: 310 }}
+          />
+        </li>
+        <li>
+          <img
+            alt={`camper: ${name}`}
+            src={photo[2]}
+            style={{ width: 290, height: 310 }}
+          />
+        </li>
+      </ul>
       <p>{description}</p>
       <div>
         <button onClick={toggleFeatures}>Features</button>
@@ -59,7 +75,18 @@ export const CamperDetails = ({
       </div>
       {showFeatures && (
         <div style={{ display: 'flex' }}>
-          <CamperFeatures />
+          <CamperFeatures
+            details={details}
+            adults={adults}
+            engine={engine}
+            transmission={transmission}
+            form={form}
+            length={length}
+            width={width}
+            height={height}
+            tank={tank}
+            consumption={consumption}
+          />
           <BookingForm />
         </div>
       )}

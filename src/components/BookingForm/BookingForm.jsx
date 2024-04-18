@@ -26,7 +26,7 @@ export const BookingForm = () => {
 
   return (
     <div>
-      <h2>Book your campervan now</h2>
+      <h3>Book your campervan now</h3>
       <p>Stay connected! we are always ready to help you</p>
       <form onSubmit={handleSubmit}>
         <div>

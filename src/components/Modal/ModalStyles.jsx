@@ -14,7 +14,7 @@ const Content = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 570px;
+  max-width: 970px;
   padding: 60px 0 40px;
   width: 100%;
   font-weight: 700;

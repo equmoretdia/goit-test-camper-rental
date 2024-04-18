@@ -34,7 +34,7 @@ export const CamperCard = ({
             </div>
             <div>
               <p>{rating}</p>
-              <p>{reviews.length}</p>
+              <p>({reviews.length} Reviews)</p>
               <p>{location}</p>
             </div>
           </div>
@@ -65,7 +65,19 @@ export const CamperCard = ({
       </li>
       {isModalOpen && (
         <Modal onClose={toggleModal}>
-          <CamperDetails />
+          <CamperDetails
+            name={name}
+            price={price}
+            rating={rating}
+            location={location}
+            adults={adults}
+            engine={engine}
+            transmission={transmission}
+            description={description}
+            details={details}
+            photo={photo}
+            reviews={reviews}
+          />
         </Modal>
       )}
     </>

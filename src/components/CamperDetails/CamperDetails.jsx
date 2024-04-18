@@ -1,4 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
+
+import { BookingForm } from '../BookingForm/BookingForm';
+import { CamperFeatures } from '../CamperFeatures/CamperFeatures';
+import { CamperReviews } from '../CamperReviews/CamperReviews';
 
 export const CamperDetails = ({
   name,
@@ -9,6 +13,19 @@ export const CamperDetails = ({
   photo,
   reviews,
 }) => {
+  const [showFeatures, setShowFeatures] = useState(false);
+  const [showReviews, setShowReviews] = useState(false);
+
+  const toggleFeatures = () => {
+    setShowFeatures(true);
+    setShowReviews(false);
+  };
+
+  const toggleReviews = () => {
+    setShowReviews(true);
+    setShowFeatures(false);
+  };
+
   return (
     <>
       <h2>{name}</h2>
@@ -36,6 +53,22 @@ export const CamperDetails = ({
         />
       </div>
       <p>{description}</p>
+      <div>
+        <button onClick={toggleFeatures}>Features</button>
+        <button onClick={toggleReviews}>Reviews</button>
+      </div>
+      {showFeatures && (
+        <div style={{ display: 'flex' }}>
+          <CamperFeatures />
+          <BookingForm />
+        </div>
+      )}
+      {showReviews && (
+        <div style={{ display: 'flex' }}>
+          <CamperReviews reviews={reviews} />
+          <BookingForm />
+        </div>
+      )}
     </>
   );
 };

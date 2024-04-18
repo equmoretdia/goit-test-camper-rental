@@ -6,15 +6,17 @@ export const Layout = () => {
   return (
     <>
       <header>
-        <li>
-          <NavLink to="/">Home</NavLink>
-        </li>
-        <li>
-          <NavLink to="/catalog">Catalog</NavLink>
-        </li>
-        <li>
-          <NavLink to="/favorites">Favorites</NavLink>
-        </li>
+        <ul>
+          <li>
+            <NavLink to="/">Home</NavLink>
+          </li>
+          <li>
+            <NavLink to="/catalog">Catalog</NavLink>
+          </li>
+          <li>
+            <NavLink to="/favorites">Favorites</NavLink>
+          </li>
+        </ul>
       </header>
       <main>
         <Suspense fallback={<div>Loading...</div>}>

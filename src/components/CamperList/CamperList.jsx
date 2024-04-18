@@ -1,9 +1,25 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 
 import { CamperCard } from '../CamperCard/CamperCard';
-import campers from '../../db/campers.json';
+// import campers from '../../db/campers.json';
+import {
+  selectItems,
+  // selectError,
+  // selectIsLoading,
+} from '../../redux/selectors';
+import { fetchCampers } from '../../redux/operations';
 
 export const CamperList = () => {
+  const dispatch = useDispatch();
+  // const isLoading = useSelector(selectIsLoading);
+  // const error = useSelector(selectError);
+  const campers = useSelector(selectItems);
+
+  useEffect(() => {
+    dispatch(fetchCampers());
+  }, [dispatch]);
+
   return (
     <ul style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
       {campers.map(camper => (

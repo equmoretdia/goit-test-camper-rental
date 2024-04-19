@@ -9,6 +9,7 @@ import {
   // selectIsLoading,
 } from '../../redux/selectors';
 import { fetchCampers } from '../../redux/operations';
+import { List } from './CamperListStyles';
 
 export const CamperList = () => {
   const dispatch = useDispatch();
@@ -21,7 +22,7 @@ export const CamperList = () => {
   }, [dispatch]);
 
   return (
-    <ul style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+    <List>
       {campers.map(camper => (
         <CamperCard
           key={camper._id}
@@ -45,6 +46,6 @@ export const CamperList = () => {
           consumption={camper.consumption}
         />
       ))}
-    </ul>
+    </List>
   );
 };

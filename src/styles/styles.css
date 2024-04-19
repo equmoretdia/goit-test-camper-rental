@@ -1,5 +1,10 @@
 @import '~@csstools/normalize.css';
 
+/*     */
+/*reset*/
+/*     */
+
+body,
 h1,
 h2,
 h3,
@@ -16,16 +21,71 @@ ul {
   padding: 0;
 }
 
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  box-sizing: border-box;
-  color: #383848;
+a {
+  text-decoration: none;
+  color: currentColor;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+address {
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/*         */
+/*variables*/
+/*         */
+
+:root {
+  /*main colors*/
+  --background: #fff;
+  --button: #e44848;
+  --main: #101828;
+  --inputs: #f7f7f7;
+  --block-features: #f2f4f7;
+  --rating: #ffc531;
+  --text: #475467;
+  /*font families*/
+  --font-family: 'Inter', sans-serif;
+}
+
+/*           */
+/*base styles*/
+/*           */
+
+body {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--font-family);
+  color: var(--text);
+  background-color: var(--background);
+}
+
+img {
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+input {
+  font-family: inherit;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }

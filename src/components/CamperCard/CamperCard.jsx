@@ -8,11 +8,21 @@ import {
   ImgWrapper,
   Img,
   CardInfo,
-  FirstDiv,
+  FirstRow,
   Header,
   PriceFavorite,
   HeartButton,
+  SecondRow,
+  RatingBlock,
+  RatingData,
+  LocationBlock,
+  LocationData,
+  Description,
+  FeatureBlock,
+  Feature,
+  ShowMore,
 } from './CamperCardStyles';
+import ac from '../../images/ac.svg';
 
 export const CamperCard = ({
   name,
@@ -43,7 +53,7 @@ export const CamperCard = ({
         </ImgWrapper>
         <CardInfo>
           <div>
-            <FirstDiv>
+            <FirstRow>
               <Header>{name}</Header>
               <PriceFavorite>
                 <Header>&#8364;{price.toFixed(2)}</Header>
@@ -58,39 +68,113 @@ export const CamperCard = ({
                   />
                 </HeartButton>
               </PriceFavorite>
-            </FirstDiv>
-            <div>
-              <p>{rating}</p>
-              <p>({reviews.length} Reviews)</p>
-              <p>{location}</p>
-            </div>
+            </FirstRow>
+            <SecondRow>
+              <RatingBlock>
+                <IconComponent
+                  id="#star"
+                  width={16}
+                  height={16}
+                  stroke="var(--rating)"
+                  strokeWidth={0}
+                  fill="var(--rating)"
+                />
+                <RatingData>
+                  {rating}({reviews.length} Reviews)
+                </RatingData>
+              </RatingBlock>
+              <LocationBlock>
+                <IconComponent
+                  id="#icon-map-pin"
+                  width={16}
+                  height={16}
+                  stroke="var(--main)"
+                  strokeWidth={1.3}
+                  fill="none"
+                />
+                <LocationData>{location}</LocationData>
+              </LocationBlock>
+            </SecondRow>
           </div>
-          <p>{description}</p>
-          <ul>
+          <Description>{description}</Description>
+          <FeatureBlock>
+            <Feature key={adults}>
+              <IconComponent
+                id="#people"
+                width={20}
+                height={20}
+                stroke="none"
+                strokeWidth={0}
+                fill="var(--main)"
+              />
+              <span>{adults} adults</span>
+            </Feature>
+            <Feature key={engine}>
+              <IconComponent
+                id="#petrol"
+                width={20}
+                height={20}
+                stroke="none"
+                strokeWidth={0}
+                fill="var(--main)"
+              />
+              <p>{engine}</p>
+            </Feature>
+            <Feature key={transmission}>
+              <IconComponent
+                id="#transmission"
+                width={20}
+                height={20}
+                stroke="none"
+                strokeWidth={0}
+                fill="var(--main)"
+              />
+              <p>{transmission}</p>
+            </Feature>
             {Object.entries(details).map(([key, value]) => {
               if (
                 (typeof value === 'number' && value === 0) ||
                 (typeof value === 'string' && value.trim() === '')
               ) {
                 return null;
+              } else {
+                if (key === 'airConditioner') {
+                  return (
+                    <Feature key={key}>
+                      <svg width="20" height="20">
+                        <use
+                          href={ac}
+                          stroke="black"
+                          stroke-width="1"
+                          fill="black"
+                        ></use>
+                      </svg>
+                      <p>AC</p>
+                    </Feature>
+                  );
+                } else {
+                  return (
+                    <Feature key={key}>
+                      <IconComponent
+                        id={`#${key}`}
+                        width={20}
+                        height={20}
+                        stroke="none"
+                        strokeWidth={0}
+                        fill="var(--main)"
+                      />
+                      <p>
+                        {value} {key}
+                      </p>
+                    </Feature>
+                  );
+                }
               }
-              return (
-                <li key={key}>
-                  {key}: {value}
-                </li>
-              );
             })}
-            <li key={adults}>adults: {adults}</li>
-            <li key={engine}>engine: {engine}</li>
-            <li key={transmission}>transmission: {transmission}</li>
-          </ul>
-          <button
-            type="button"
-            onClick={toggleModal}
-            style={{ width: 155, height: 56 }}
-          >
+          </FeatureBlock>
+          <ShowMore type="button" onClick={toggleModal}>
             Show more
-          </button>
+          </ShowMore>
         </CardInfo>
       </Card>
       {isModalOpen && (

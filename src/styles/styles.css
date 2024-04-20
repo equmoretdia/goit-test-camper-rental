@@ -42,6 +42,7 @@ address {
   /*main colors*/
   --background: #fff;
   --button: #e44848;
+  --active-button: #d84343;
   --main: #101828;
   --inputs: #f7f7f7;
   --block-features: #f2f4f7;

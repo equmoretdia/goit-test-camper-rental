@@ -47,6 +47,8 @@ address {
   --block-features: #f2f4f7;
   --rating: #ffc531;
   --text: #475467;
+  /*border colors*/
+  --card-border-color: #10182833;
   /*font families*/
   --font-family: 'Inter', sans-serif;
 }
@@ -62,6 +64,12 @@ body {
   font-family: var(--font-family);
   color: var(--text);
   background-color: var(--background);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--main);
 }
 
 img {

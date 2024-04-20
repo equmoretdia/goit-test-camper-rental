@@ -2,6 +2,17 @@ import React, { useState } from 'react';
 
 import { Modal } from '../Modal/Modal';
 import { CamperDetails } from '../CamperDetails/CamperDetails';
+import { IconComponent } from '../IconComponent/IconComponent';
+import {
+  Card,
+  ImgWrapper,
+  Img,
+  CardInfo,
+  FirstDiv,
+  Header,
+  PriceFavorite,
+  HeartButton,
+} from './CamperCardStyles';
 
 export const CamperCard = ({
   name,
@@ -26,18 +37,28 @@ export const CamperCard = ({
   const toggleModal = () => setIsModalOpen(state => !state);
   return (
     <>
-      <li style={{ display: 'flex' }}>
-        <img
-          alt={`camper: ${name}`}
-          src={photo[0]}
-          style={{ width: 290, height: 310 }}
-        />
-        <div>
+      <Card>
+        <ImgWrapper>
+          <Img alt={`camper: ${name}`} src={photo[0]} />
+        </ImgWrapper>
+        <CardInfo>
           <div>
-            <div>
-              <h2>{name}</h2>
-              <p>{price}</p>
-            </div>
+            <FirstDiv>
+              <Header>{name}</Header>
+              <PriceFavorite>
+                <Header>&#8364;{price.toFixed(2)}</Header>
+                <HeartButton type="button">
+                  <IconComponent
+                    id="#heart"
+                    width={24}
+                    height={24}
+                    stroke="var(--main)"
+                    strokeWidth={2.3}
+                    fill="none"
+                  />
+                </HeartButton>
+              </PriceFavorite>
+            </FirstDiv>
             <div>
               <p>{rating}</p>
               <p>({reviews.length} Reviews)</p>
@@ -70,8 +91,8 @@ export const CamperCard = ({
           >
             Show more
           </button>
-        </div>
-      </li>
+        </CardInfo>
+      </Card>
       {isModalOpen && (
         <Modal onClose={toggleModal}>
           <CamperDetails

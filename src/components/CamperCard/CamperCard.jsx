@@ -197,6 +197,7 @@ export const CamperCard = ({
             height={height}
             tank={tank}
             consumption={consumption}
+            closeModal={toggleModal}
           />
         </Modal>
       )}

@@ -3,6 +3,27 @@ import React, { useState } from 'react';
 import { BookingForm } from '../BookingForm/BookingForm';
 import { CamperFeatures } from '../CamperFeatures/CamperFeatures';
 import { CamperReviews } from '../CamperReviews/CamperReviews';
+import { IconComponent } from '../IconComponent/IconComponent';
+import {
+  // Card,
+  // ImgWrapper,
+  // Img,
+  // CardInfo,
+  FirstRow,
+  Header,
+  CloseButton,
+
+  // PriceFavorite,
+  SecondRow,
+  RatingBlock,
+  RatingData,
+  LocationBlock,
+  LocationData,
+  // Description,
+  // FeatureBlock,
+  // Feature,
+  // ShowMore,
+} from './CamperDetailsStyles';
 
 export const CamperDetails = ({
   name,
@@ -22,6 +43,7 @@ export const CamperDetails = ({
   height,
   tank,
   consumption,
+  closeModal,
 }) => {
   const [showFeatures, setShowFeatures] = useState(false);
   const [showReviews, setShowReviews] = useState(false);
@@ -38,12 +60,45 @@ export const CamperDetails = ({
 
   return (
     <>
-      <h2>{name}</h2>
-      <div>
-        <p>{rating}</p>
-        <p>({reviews.length} Reviews)</p>
-        <p>{location}</p>
-      </div>
+      <FirstRow>
+        <Header>{name}</Header>
+        <CloseButton type="button" onClick={closeModal}>
+          <IconComponent
+            id="#modal-close"
+            width={32}
+            height={32}
+            stroke="var(--main)"
+            strokeWidth={3}
+            fill="none"
+          />
+        </CloseButton>
+      </FirstRow>
+      <SecondRow>
+        <RatingBlock>
+          <IconComponent
+            id="#star"
+            width={16}
+            height={16}
+            stroke="var(--rating)"
+            strokeWidth={0}
+            fill="var(--rating)"
+          />
+          <RatingData>
+            {rating}({reviews.length} Reviews)
+          </RatingData>
+        </RatingBlock>
+        <LocationBlock>
+          <IconComponent
+            id="#icon-map-pin"
+            width={16}
+            height={16}
+            stroke="var(--main)"
+            strokeWidth={1.3}
+            fill="none"
+          />
+          <LocationData>{location}</LocationData>
+        </LocationBlock>
+      </SecondRow>
       <p>{price}</p>
       <ul style={{ display: 'flex' }}>
         <li>

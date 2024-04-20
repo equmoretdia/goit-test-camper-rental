@@ -5,21 +5,20 @@ import { CamperFeatures } from '../CamperFeatures/CamperFeatures';
 import { CamperReviews } from '../CamperReviews/CamperReviews';
 import { IconComponent } from '../IconComponent/IconComponent';
 import {
-  // Card,
-  // ImgWrapper,
-  // Img,
-  // CardInfo,
-  FirstRow,
+  HeaderRow,
   Header,
   CloseButton,
-
-  // PriceFavorite,
+  InfoBlock,
+  MainBlock,
   SecondRow,
   RatingBlock,
   RatingData,
   LocationBlock,
   LocationData,
-  // Description,
+  Gallery,
+  ImgWrapper,
+  Img,
+  Description,
   // FeatureBlock,
   // Feature,
   // ShowMore,
@@ -60,7 +59,7 @@ export const CamperDetails = ({
 
   return (
     <>
-      <FirstRow>
+      <HeaderRow>
         <Header>{name}</Header>
         <CloseButton type="button" onClick={closeModal}>
           <IconComponent
@@ -72,85 +71,77 @@ export const CamperDetails = ({
             fill="none"
           />
         </CloseButton>
-      </FirstRow>
-      <SecondRow>
-        <RatingBlock>
-          <IconComponent
-            id="#star"
-            width={16}
-            height={16}
-            stroke="var(--rating)"
-            strokeWidth={0}
-            fill="var(--rating)"
-          />
-          <RatingData>
-            {rating}({reviews.length} Reviews)
-          </RatingData>
-        </RatingBlock>
-        <LocationBlock>
-          <IconComponent
-            id="#icon-map-pin"
-            width={16}
-            height={16}
-            stroke="var(--main)"
-            strokeWidth={1.3}
-            fill="none"
-          />
-          <LocationData>{location}</LocationData>
-        </LocationBlock>
-      </SecondRow>
-      <p>{price}</p>
-      <ul style={{ display: 'flex' }}>
-        <li>
-          <img
-            alt={`camper: ${name}`}
-            src={photo[0]}
-            style={{ width: 290, height: 310 }}
-          />
-        </li>
-        <li>
-          <img
-            alt={`camper: ${name}`}
-            src={photo[1]}
-            style={{ width: 290, height: 310 }}
-          />
-        </li>
-        <li>
-          <img
-            alt={`camper: ${name}`}
-            src={photo[2]}
-            style={{ width: 290, height: 310 }}
-          />
-        </li>
-      </ul>
-      <p>{description}</p>
-      <div>
-        <button onClick={toggleFeatures}>Features</button>
-        <button onClick={toggleReviews}>Reviews</button>
-      </div>
-      {showFeatures && (
-        <div style={{ display: 'flex' }}>
-          <CamperFeatures
-            details={details}
-            adults={adults}
-            engine={engine}
-            transmission={transmission}
-            form={form}
-            length={length}
-            width={width}
-            height={height}
-            tank={tank}
-            consumption={consumption}
-          />
-          <BookingForm />
+      </HeaderRow>
+      <InfoBlock>
+        <SecondRow>
+          <RatingBlock>
+            <IconComponent
+              id="#star"
+              width={16}
+              height={16}
+              stroke="var(--rating)"
+              strokeWidth={0}
+              fill="var(--rating)"
+            />
+            <RatingData>
+              {rating}({reviews.length} Reviews)
+            </RatingData>
+          </RatingBlock>
+          <LocationBlock>
+            <IconComponent
+              id="#icon-map-pin"
+              width={16}
+              height={16}
+              stroke="var(--main)"
+              strokeWidth={1.3}
+              fill="none"
+            />
+            <LocationData>{location}</LocationData>
+          </LocationBlock>
+        </SecondRow>
+        <Header>&#8364;{price.toFixed(2)}</Header>
+      </InfoBlock>
+      <MainBlock>
+        <Gallery>
+          <ImgWrapper>
+            <Img alt={`camper: ${name}`} src={photo[0]} />
+          </ImgWrapper>
+          <ImgWrapper>
+            <Img alt={`camper: ${name}`} src={photo[1]} />
+          </ImgWrapper>
+          <ImgWrapper>
+            <Img alt={`camper: ${name}`} src={photo[2]} />
+          </ImgWrapper>
+        </Gallery>
+        <Description>{description}</Description>
+        <div>
+          <button onClick={toggleFeatures}>Features</button>
+          <button onClick={toggleReviews}>Reviews</button>
         </div>
-      )}
-      {showReviews && (
-        <div style={{ display: 'flex' }}>
-          <CamperReviews reviews={reviews} />
-          <BookingForm />
-        </div>
-      )}
+        {showFeatures && (
+          <div style={{ display: 'flex' }}>
+            <CamperFeatures
+              details={details}
+              adults={adults}
+              engine={engine}
+              transmission={transmission}
+              form={form}
+              length={length}
+              width={width}
+              height={height}
+              tank={tank}
+              consumption={consumption}
+            />
+            <BookingForm />
+          </div>
+        )}
+        {showReviews && (
+          <div style={{ display: 'flex' }}>
+            <CamperReviews reviews={reviews} />
+            <BookingForm />
+          </div>
+        )}
+      </MainBlock>
     </>
   );
 };

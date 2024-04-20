@@ -53,6 +53,8 @@ address {
   --card-border-color: #10182833;
   /*font families*/
   --font-family: 'Inter', sans-serif;
+  /*shadows*/
+  --img-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
 /*           */

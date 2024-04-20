@@ -1,39 +1,10 @@
 import styled from 'styled-components';
 
-// const Card = styled.li`
-//   display: flex;
-//   gap: 24px;
-//   padding: 24px;
-//   width: 100%;
-//   height: 358px;
-//   border: 1px solid var(--card-border-color);
-//   border-radius: 20px;
-// `;
-
-// const ImgWrapper = styled.div`
-//   display: flex;
-//   justify-content: center;
-//   min-width: 290px;
-//   max-height: 310px;
-//   border-radius: 10px;
-//   overflow: hidden;
-// `;
-
-// const Img = styled.img`
-//   height: 100%;
-// `;
-
-// const CardInfo = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   gap: 24px;
-// `;
-
-const FirstRow = styled.div`
+const HeaderRow = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 `;
 
 const Header = styled.h2`
@@ -58,18 +29,16 @@ const CloseButton = styled.button`
   padding: 0px;
 `;
 
-// const PriceFavorite = styled.div`
-//   display: flex;
-//   justify-content: flex-start;
-//   align-items: center;
-// `;
+const InfoBlock = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+`;
 
-// const HeartButton = styled.button`
-//   background-color: transparent;
-//   border: none;
-//   padding: 0px;
-//   margin-left: 10px;
-// `;
+const MainBlock = styled.div`
+  /* overflow-y: scroll; */
+`;
 
 const SecondRow = styled.div`
   display: flex;
@@ -104,13 +73,30 @@ const LocationData = styled.p`
   color: var(--main);
 `;
 
-// const Description = styled.p`
-//   display: -webkit-box;
-//   line-height: 1.5;
-//   overflow: hidden;
-//   -webkit-line-clamp: 1;
-//   -webkit-box-orient: vertical;
-// `;
+const Gallery = styled.ul`
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+`;
+
+const ImgWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  min-width: 290px;
+  max-height: 310px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--img-shadow);
+`;
+
+const Img = styled.img`
+  height: 100%;
+`;
+
+const Description = styled.p`
+  line-height: 1.5;
+  margin-bottom: 44px;
+`;
 
 // const FeatureBlock = styled.ul`
 //   display: flex;
@@ -157,20 +143,20 @@ const LocationData = styled.p`
 // `;
 
 export {
-  //   Card,
-  //   ImgWrapper,
-  //   Img,
-  //   CardInfo,
-  FirstRow,
+  HeaderRow,
   Header,
   CloseButton,
-  //   PriceFavorite,
+  InfoBlock,
+  MainBlock,
   SecondRow,
   RatingBlock,
   RatingData,
   LocationBlock,
   LocationData,
-  //   Description,
+  Gallery,
+  ImgWrapper,
+  Img,
+  Description,
   //   FeatureBlock,
   //   Feature,
   //   ShowMore,

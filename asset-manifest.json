@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/goit-test-camper-rental/static/css/main.d09fcd93.css",
-    "main.js": "/goit-test-camper-rental/static/js/main.f9705b5e.js",
+    "main.css": "/goit-test-camper-rental/static/css/main.5558a96a.css",
+    "main.js": "/goit-test-camper-rental/static/js/main.954133c3.js",
     "static/js/415.9ea7b289.chunk.js": "/goit-test-camper-rental/static/js/415.9ea7b289.chunk.js",
-    "static/js/776.26463649.chunk.js": "/goit-test-camper-rental/static/js/776.26463649.chunk.js",
+    "static/js/776.b7653228.chunk.js": "/goit-test-camper-rental/static/js/776.b7653228.chunk.js",
     "static/js/395.12e69f66.chunk.js": "/goit-test-camper-rental/static/js/395.12e69f66.chunk.js",
     "static/css/636.dd58e697.chunk.css": "/goit-test-camper-rental/static/css/636.dd58e697.chunk.css",
     "static/js/636.6612e615.chunk.js": "/goit-test-camper-rental/static/js/636.6612e615.chunk.js",
     "static/media/icons.svg": "/goit-test-camper-rental/static/media/icons.ce72c2f097b4ad3e929fcbb71bb2b4fe.svg",
     "static/media/ac.svg": "/goit-test-camper-rental/static/media/ac.a8314fc335554ba2b5cf43620c453186.svg",
     "index.html": "/goit-test-camper-rental/index.html",
-    "main.d09fcd93.css.map": "/goit-test-camper-rental/static/css/main.d09fcd93.css.map",
-    "main.f9705b5e.js.map": "/goit-test-camper-rental/static/js/main.f9705b5e.js.map",
+    "main.5558a96a.css.map": "/goit-test-camper-rental/static/css/main.5558a96a.css.map",
+    "main.954133c3.js.map": "/goit-test-camper-rental/static/js/main.954133c3.js.map",
     "415.9ea7b289.chunk.js.map": "/goit-test-camper-rental/static/js/415.9ea7b289.chunk.js.map",
-    "776.26463649.chunk.js.map": "/goit-test-camper-rental/static/js/776.26463649.chunk.js.map",
+    "776.b7653228.chunk.js.map": "/goit-test-camper-rental/static/js/776.b7653228.chunk.js.map",
     "395.12e69f66.chunk.js.map": "/goit-test-camper-rental/static/js/395.12e69f66.chunk.js.map",
     "636.dd58e697.chunk.css.map": "/goit-test-camper-rental/static/css/636.dd58e697.chunk.css.map",
     "636.6612e615.chunk.js.map": "/goit-test-camper-rental/static/js/636.6612e615.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d09fcd93.css",
-    "static/js/main.f9705b5e.js"
+    "static/css/main.5558a96a.css",
+    "static/js/main.954133c3.js"
   ]
 }

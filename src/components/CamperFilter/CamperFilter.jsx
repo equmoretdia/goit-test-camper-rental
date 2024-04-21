@@ -17,20 +17,16 @@ export const CamperFilter = () => {
               strokeWidth={1.3}
               fill="none"
             />
-            <input
-              type="text"
-              name="location"
-              placeholder="City in Ukraine"
-              className="search-input"
-            />
+            <input type="text" name="location" placeholder="City in Ukraine" />
           </div>
         </div>
-        <div className="equipment-filter">
+        <div>
           <p>Filters</p>
           <h3>Vehicle equipment</h3>
           <ul>
             <li>
               <input type="checkbox" name="AC" id="AC" value="AC" />
+              <p>AC</p>
             </li>
             <li>
               <input
@@ -39,6 +35,7 @@ export const CamperFilter = () => {
                 id="transmission"
                 value="transmission"
               />
+              <p>Automatic</p>
             </li>
             <li>
               <input
@@ -47,9 +44,11 @@ export const CamperFilter = () => {
                 id="kitchen"
                 value="kitchen"
               />
+              <p>Kitchen</p>
             </li>
             <li>
               <input type="checkbox" name="TV" id="TV" value="TV" />
+              <p>TV</p>
             </li>
             <li>
               <input
@@ -58,6 +57,7 @@ export const CamperFilter = () => {
                 id="bathroom"
                 value="bathroom"
               />
+              <p>Shower/WC</p>
             </li>
           </ul>
         </div>
@@ -66,6 +66,7 @@ export const CamperFilter = () => {
           <div>
             <div>
               <input type="radio" name="type" id="van" value="van" />
+              <p>Van</p>
             </div>
             <div>
               <input
@@ -74,9 +75,11 @@ export const CamperFilter = () => {
                 id="fully-integrated"
                 value="fully-integrated"
               />
+              <p>Fully integrated</p>
             </div>
             <div>
               <input type="radio" name="type" id="alcove" value="alcove" />
+              <p>Alcove</p>
             </div>
           </div>
         </div>

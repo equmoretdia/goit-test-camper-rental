@@ -145,7 +145,7 @@ export const CamperCard = ({
                         <use
                           href={ac}
                           stroke="black"
-                          stroke-width="1"
+                          strokeWidth="1"
                           fill="black"
                         ></use>
                       </svg>

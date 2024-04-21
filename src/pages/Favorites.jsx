@@ -1,9 +1,11 @@
 import React from 'react';
 
+import { Header } from './PageStyles';
+
 const Favorites = () => {
   return (
     <section>
-      <h1>Favorites</h1>
+      <Header>Favorites</Header>
     </section>
   );
 };

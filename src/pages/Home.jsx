@@ -1,9 +1,11 @@
 import React from 'react';
 
+import { Header } from './PageStyles';
+
 const Home = () => {
   return (
     <section>
-      <h1>Home</h1>
+      <Header>Home</Header>
     </section>
   );
 };

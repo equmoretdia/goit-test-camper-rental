@@ -1,27 +1,29 @@
 {
   "files": {
     "main.css": "/goit-test-camper-rental/static/css/main.5558a96a.css",
-    "main.js": "/goit-test-camper-rental/static/js/main.cf8230a2.js",
+    "main.js": "/goit-test-camper-rental/static/js/main.80344f87.js",
     "static/js/415.4b358abd.chunk.js": "/goit-test-camper-rental/static/js/415.4b358abd.chunk.js",
-    "static/js/942.3d986ad0.chunk.js": "/goit-test-camper-rental/static/js/942.3d986ad0.chunk.js",
-    "static/js/395.2824c257.chunk.js": "/goit-test-camper-rental/static/js/395.2824c257.chunk.js",
+    "static/js/891.3e10f795.chunk.js": "/goit-test-camper-rental/static/js/891.3e10f795.chunk.js",
+    "static/js/732.ef398918.chunk.js": "/goit-test-camper-rental/static/js/732.ef398918.chunk.js",
     "static/js/989.495266da.chunk.js": "/goit-test-camper-rental/static/js/989.495266da.chunk.js",
     "static/css/44.6310eaba.chunk.css": "/goit-test-camper-rental/static/css/44.6310eaba.chunk.css",
     "static/js/44.fc7e6104.chunk.js": "/goit-test-camper-rental/static/js/44.fc7e6104.chunk.js",
+    "static/js/801.073bfe77.chunk.js": "/goit-test-camper-rental/static/js/801.073bfe77.chunk.js",
     "static/media/icons.svg": "/goit-test-camper-rental/static/media/icons.ce72c2f097b4ad3e929fcbb71bb2b4fe.svg",
     "static/media/ac.svg": "/goit-test-camper-rental/static/media/ac.a8314fc335554ba2b5cf43620c453186.svg",
     "index.html": "/goit-test-camper-rental/index.html",
     "main.5558a96a.css.map": "/goit-test-camper-rental/static/css/main.5558a96a.css.map",
-    "main.cf8230a2.js.map": "/goit-test-camper-rental/static/js/main.cf8230a2.js.map",
+    "main.80344f87.js.map": "/goit-test-camper-rental/static/js/main.80344f87.js.map",
     "415.4b358abd.chunk.js.map": "/goit-test-camper-rental/static/js/415.4b358abd.chunk.js.map",
-    "942.3d986ad0.chunk.js.map": "/goit-test-camper-rental/static/js/942.3d986ad0.chunk.js.map",
-    "395.2824c257.chunk.js.map": "/goit-test-camper-rental/static/js/395.2824c257.chunk.js.map",
+    "891.3e10f795.chunk.js.map": "/goit-test-camper-rental/static/js/891.3e10f795.chunk.js.map",
+    "732.ef398918.chunk.js.map": "/goit-test-camper-rental/static/js/732.ef398918.chunk.js.map",
     "989.495266da.chunk.js.map": "/goit-test-camper-rental/static/js/989.495266da.chunk.js.map",
     "44.6310eaba.chunk.css.map": "/goit-test-camper-rental/static/css/44.6310eaba.chunk.css.map",
-    "44.fc7e6104.chunk.js.map": "/goit-test-camper-rental/static/js/44.fc7e6104.chunk.js.map"
+    "44.fc7e6104.chunk.js.map": "/goit-test-camper-rental/static/js/44.fc7e6104.chunk.js.map",
+    "801.073bfe77.chunk.js.map": "/goit-test-camper-rental/static/js/801.073bfe77.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5558a96a.css",
-    "static/js/main.cf8230a2.js"
+    "static/js/main.80344f87.js"
   ]
 }

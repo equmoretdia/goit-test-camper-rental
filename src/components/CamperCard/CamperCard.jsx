@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
+import { selectFavorites } from '../../redux/selectors';
+import { addFavorite, deleteFavorite } from '../../redux/favoritesSlice';
 import { Modal } from '../Modal/Modal';
 import { CamperDetails } from '../CamperDetails/CamperDetails';
 import { IconComponent } from '../IconComponent/IconComponent';
@@ -24,32 +27,42 @@ import {
 } from './CamperCardStyles';
 import ac from '../../images/ac.svg';
 
-export const CamperCard = ({
-  name,
-  price,
-  rating,
-  location,
-  adults,
-  engine,
-  transmission,
-  description,
-  details,
-  photo,
-  reviews,
-  form,
-  length,
-  width,
-  height,
-  tank,
-  consumption,
-}) => {
+export const CamperCard = ({ camper }) => {
+  const {
+    _id,
+    name,
+    price,
+    rating,
+    location,
+    adults,
+    engine,
+    transmission,
+    description,
+    details,
+    gallery,
+    reviews,
+    form,
+    length,
+    width,
+    height,
+    tank,
+    consumption,
+  } = camper;
+
+  const dispatch = useDispatch();
+  const favorites = useSelector(selectFavorites);
+  const isFavorite = favorites?.some(item => item._id === _id);
+  const toggleFavorite = () => {
+    dispatch(isFavorite ? deleteFavorite(camper) : addFavorite(camper));
+  };
+
   const [isModalOpen, setIsModalOpen] = useState(false);
   const toggleModal = () => setIsModalOpen(state => !state);
   return (
     <>
       <Card>
         <ImgWrapper>
-          <Img alt={`camper: ${name}`} src={photo[0]} />
+          <Img alt={`camper: ${name}`} src={gallery[0]} />
         </ImgWrapper>
         <CardInfo>
           <div>
@@ -57,7 +70,7 @@ export const CamperCard = ({
               <Header>{name}</Header>
               <PriceFavorite>
                 <Header>&#8364;{price.toFixed(2)}</Header>
-                <HeartButton type="button">
+                <HeartButton type="button" onClick={toggleFavorite}>
                   <IconComponent
                     id="#heart"
                     width={24}
@@ -189,7 +202,7 @@ export const CamperCard = ({
             transmission={transmission}
             description={description}
             details={details}
-            photo={photo}
+            photo={gallery}
             reviews={reviews}
             form={form}
             length={length}

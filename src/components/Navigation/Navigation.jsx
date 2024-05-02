@@ -1,18 +1,20 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
+import { NavList, NavItem } from './NavigationStyles';
+
 export const Navigation = () => {
   return (
-    <ul>
-      <li>
+    <NavList>
+      <NavItem>
         <NavLink to="/">Home</NavLink>
-      </li>
-      <li>
+      </NavItem>
+      <NavItem>
         <NavLink to="/catalog">Catalog</NavLink>
-      </li>
-      <li>
+      </NavItem>
+      <NavItem>
         <NavLink to="/favorites">Favorites</NavLink>
-      </li>
-    </ul>
+      </NavItem>
+    </NavList>
   );
 };

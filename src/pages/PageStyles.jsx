@@ -1,6 +1,12 @@
 import styled from 'styled-components';
 
 const Header = styled.h1`
+  text-align: center;
+  margin-bottom: 32px;
+  font-size: 32px;
+`;
+
+const HiddenHeader = styled.h1`
   position: absolute;
   width: 1px;
   height: 1px;
@@ -13,4 +19,45 @@ const Header = styled.h1`
   overflow: hidden;
 `;
 
-export { Header };
+const ContentContainer = styled.div`
+  display: flex;
+  gap: 16px;
+`;
+
+// const Header = styled.h1`
+//   text-align: center;
+//   margin-bottom: 32px;
+//   font-size: 32px;
+//   /* border: 0;
+//   padding: 0; */
+// `;
+
+const Reason = styled.li`
+  padding-bottom: 16px;
+`;
+
+const ReasonHeader = styled.h2`
+  font-size: 24px;
+  margin-bottom: 8px;
+`;
+
+const Moto = styled.h2`
+  text-align: center;
+  font-size: 24px;
+  color: var(--button);
+  margin-bottom: 32px;
+`;
+
+const MotoSpan = styled.span`
+  color: var(--rating);
+`;
+
+export {
+  Header,
+  HiddenHeader,
+  ContentContainer,
+  Reason,
+  ReasonHeader,
+  Moto,
+  MotoSpan,
+};

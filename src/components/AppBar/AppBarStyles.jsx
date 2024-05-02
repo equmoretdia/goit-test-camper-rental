@@ -4,7 +4,6 @@ export const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 32px;
   margin-bottom: 32px;
   border-bottom: 1px solid var(--card-border-color);
 `;

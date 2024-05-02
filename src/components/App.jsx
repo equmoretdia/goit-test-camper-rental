@@ -10,8 +10,13 @@ const Catalog = lazy(() => import('../pages/Catalog'));
 const Favorites = lazy(() => import('../pages/Favorites'));
 
 export const App = () => {
+  const Container = {
+    width: '1440px',
+    margin: '0 auto',
+  };
+
   return (
-    <>
+    <div style={Container}>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
@@ -27,6 +32,6 @@ export const App = () => {
         closeOnClick
         pauseOnHover
       />
-    </>
+    </div>
   );
 };

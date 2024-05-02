@@ -3,14 +3,14 @@ import { useSelector } from 'react-redux';
 
 import { FavoriteList } from 'components/FavoriteList/FavoriteList';
 import { selectFavorites } from '../redux/selectors';
-import { Header } from './PageStyles';
+import { HiddenHeader } from './PageStyles';
 
 const Favorites = () => {
   const favorites = useSelector(selectFavorites);
 
   return (
     <section>
-      <Header>Favorites</Header>
+      <HiddenHeader>Favorites</HiddenHeader>
       {favorites.length > 0 ? (
         <FavoriteList favorites={favorites} />
       ) : (

@@ -11,18 +11,18 @@ export const NavList = styled.ul`
 
 export const NavItem = styled.li`
   .active {
-    color: var(--active-button);
     position: relative;
     padding-bottom: 23px;
+    color: var(--active-button);
   }
   .active:after {
-    background-color: var(--active-button);
-    border-radius: 2px;
-    bottom: -1px;
+    position: absolute;
     content: '';
+    width: 100%;
     height: 4px;
     left: 0;
-    position: absolute;
-    width: 100%;
+    bottom: -1px;
+    background-color: var(--active-button);
+    border-radius: 2px;
   }
 `;

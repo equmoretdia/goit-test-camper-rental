@@ -1,38 +1,49 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 import camperMain from 'images/camper-main.jpg';
 import {
   Header,
   ContentContainer,
+  ImgLinkContainer,
+  Img,
+  CatalogButton,
   Reason,
   ReasonHeader,
-  Moto,
-  MotoSpan,
+  MotoContainer,
+  MotoStart,
+  MotoEnd,
 } from './PageStyles';
 
 const Home = () => {
   return (
     <section>
-      <Header>Seven ReasonHeaders to Choose Us!</Header>
+      <Header>Seven Reasons to Choose Us!</Header>
       <ContentContainer>
-        <div>
-          <img
+        <ImgLinkContainer>
+          <Img
             src={camperMain}
             alt="camper against the backdrop of forest and snow peaks mountains"
           />
-        </div>
+          <NavLink to="/catalog">
+            <CatalogButton type="button">Catalog</CatalogButton>
+          </NavLink>
+          <MotoContainer>
+            <MotoStart>Celebrate Your Dreams Today, </MotoStart>
+            <MotoEnd> Seize the Adventure Now!</MotoEnd>
+          </MotoContainer>
+        </ImgLinkContainer>
         <ul>
           <Reason>
             <ReasonHeader>Wide Range of Campers </ReasonHeader>
             <p>
               We offer a diverse selection of campers to suit every traveler's
               needs, from cozy vans perfect for couples to spacious
-              fully-integrated models ideal for famiReasones and groups of
-              friends.
+              fully-integrated models ideal for families and groups of friends.
             </p>
           </Reason>
           <Reason>
-            <ReasonHeader>Top-QuaReasonty Equipment </ReasonHeader>
+            <ReasonHeader>Top-Quality Equipment </ReasonHeader>
             <p>
               Our campers are equipped with modern amenities to ensure a
               comfortable and convenient travel experience. From fully-equipped
@@ -88,10 +99,6 @@ const Home = () => {
           </Reason>
         </ul>
       </ContentContainer>
-      <Moto>
-        Celebrate Your Dreams Today,{' '}
-        <MotoSpan>Seize the Adventure Now!</MotoSpan>
-      </Moto>
     </section>
   );
 };

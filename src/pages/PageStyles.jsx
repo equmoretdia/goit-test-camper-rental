@@ -45,6 +45,7 @@ const Moto = styled.h2`
   text-align: center;
   font-size: 24px;
   color: var(--button);
+  padding: 32px 0;
   margin-bottom: 32px;
 `;
 

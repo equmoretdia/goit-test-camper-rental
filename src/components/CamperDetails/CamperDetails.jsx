@@ -21,7 +21,8 @@ import {
   Description,
   // FeatureBlock,
   // Feature,
-  // ShowMore,
+  FRContainer,
+  FeaturesReviews,
 } from './CamperDetailsStyles';
 
 export const CamperDetails = ({
@@ -114,10 +115,14 @@ export const CamperDetails = ({
           </ImgWrapper>
         </Gallery>
         <Description>{description}</Description>
-        <div>
-          <button onClick={toggleFeatures}>Features</button>
-          <button onClick={toggleReviews}>Reviews</button>
-        </div>
+        <FRContainer>
+          <FeaturesReviews onClick={toggleFeatures} active={showFeatures}>
+            Features
+          </FeaturesReviews>
+          <FeaturesReviews onClick={toggleReviews} active={showReviews}>
+            Reviews
+          </FeaturesReviews>
+        </FRContainer>
         {showFeatures && (
           <div style={{ display: 'flex' }}>
             <CamperFeatures

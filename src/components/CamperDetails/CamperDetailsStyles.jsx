@@ -95,7 +95,7 @@ const Img = styled.img`
 
 const Description = styled.p`
   line-height: 1.5;
-  margin-bottom: 44px;
+  padding-bottom: 44px;
 `;
 
 // const FeatureBlock = styled.ul`
@@ -124,23 +124,35 @@ const Description = styled.p`
 //   mix-blend-mode: multiply;
 // `;
 
-// const ShowMore = styled.button`
-//   padding: 16px 40px;
-//   width: 166px;
-//   height: 56px;
-//   font-weight: 500;
-//   font-size: 16px;
-//   line-height: 1.5;
-//   letter-spacing: -0.01em;
-//   color: var(--background);
-//   background-color: var(--button);
-//   border-radius: 200px;
-//   border: none;
+const FRContainer = styled.div`
+  display: flex;
+  gap: 42px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--card-border-color);
+`;
 
-//   &:hover {
-//     background-color: var(--active-button);
-//   }
-// `;
+const FeaturesReviews = styled.button`
+  padding: 0;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--main);
+  background-color: transparent;
+  border: none;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    left: 0;
+    bottom: -27px;
+    background-color: ${({ active }) =>
+      active ? 'var(--button)' : 'transparent'};
+    border-radius: 2px;
+  }
+`;
 
 export {
   HeaderRow,
@@ -159,5 +171,6 @@ export {
   Description,
   //   FeatureBlock,
   //   Feature,
-  //   ShowMore,
+  FRContainer,
+  FeaturesReviews,
 };

@@ -2,16 +2,18 @@ import React from 'react';
 
 import { CamperFilter } from 'components/CamperFilter/CamperFilter';
 import { CamperList } from 'components/CamperList/CamperList';
-import { HiddenHeader } from './PageStyles';
+import { Section, HiddenHeader, ContentContainer } from './PageStyles';
 
 const Catalog = () => {
   return (
     <>
-      <section style={{ display: 'flex' }}>
+      <Section>
         <HiddenHeader>Catalog</HiddenHeader>
-        <CamperFilter />
-        <CamperList />
-      </section>
+        <ContentContainer>
+          <CamperFilter />
+          <CamperList />
+        </ContentContainer>
+      </Section>
     </>
   );
 };

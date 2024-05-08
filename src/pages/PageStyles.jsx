@@ -1,8 +1,13 @@
 import styled from 'styled-components';
 
+const Section = styled.section`
+  min-height: 82vh;
+  padding: 32px 0;
+`;
+
 const Header = styled.h1`
   text-align: center;
-  padding: 32px 0;
+  padding-bottom: 32px;
   font-size: 32px;
   color: var(--rating);
 `;
@@ -22,8 +27,7 @@ const HiddenHeader = styled.h1`
 
 const ContentContainer = styled.div`
   display: flex;
-  gap: 16px;
-  padding-bottom: 32px;
+  gap: 64px;
 `;
 
 const ImgLinkContainer = styled.div`
@@ -66,6 +70,7 @@ const MotoEnd = styled.h2`
 `;
 
 export {
+  Section,
   Header,
   HiddenHeader,
   ContentContainer,

@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import { Button } from '../components/Button/Button';
 import camperMain from 'images/camper-main.jpg';
 import {
+  Section,
   Header,
   ContentContainer,
   ImgLinkContainer,
@@ -17,7 +18,7 @@ import {
 
 const Home = () => {
   return (
-    <section>
+    <Section>
       <Header>Seven Reasons to Choose Us!</Header>
       <ContentContainer>
         <ImgLinkContainer>
@@ -99,7 +100,7 @@ const Home = () => {
           </Reason>
         </ul>
       </ContentContainer>
-    </section>
+    </Section>
   );
 };
 

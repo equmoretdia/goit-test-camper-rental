@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 
+import { Button } from '../Button/Button';
+import { Container, Header, Form, Input } from './BookingFormStyled';
+
 export const BookingForm = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -25,49 +28,53 @@ export const BookingForm = () => {
   };
 
   return (
-    <div>
-      <h3>Book your campervan now</h3>
+    <Container>
+      <Header>Book your campervan now</Header>
       <p>Stay connected! we are always ready to help you</p>
-      <form onSubmit={handleSubmit}>
+      <Form onSubmit={handleSubmit}>
+        {/* <div>
+          <label htmlFor="name">Name:</label> */}
+        <Input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Name"
+          value={formData.name}
+          onChange={handleChange}
+        />
+        {/* </div>
         <div>
-          <label htmlFor="name">Name:</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-          />
-        </div>
+          <label htmlFor="email">Email:</label> */}
+        <Input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Email"
+          value={formData.email}
+          onChange={handleChange}
+        />
+        {/* </div>
         <div>
-          <label htmlFor="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-          />
-        </div>
+          <label htmlFor="bookingDate">Booking Date:</label> */}
+        <DatePicker
+          selected={formData.bookingDate}
+          dateFormat="dd/MM/yyyy"
+          placeholderText="Booking date"
+          onChange={handleDateChange}
+        />
+        {/* </div>
         <div>
-          <label htmlFor="bookingDate">Booking Date:</label>
-          <DatePicker
-            selected={formData.bookingDate}
-            dateFormat="dd/MM/yyyy"
-            onChange={handleDateChange}
-          />
-        </div>
-        <div>
-          <label htmlFor="comment">Comment:</label>
-          <textarea
-            id="comment"
-            name="comment"
-            value={formData.comment}
-            onChange={handleChange}
-          />
-        </div>
-        <button type="submit">Send</button>
-      </form>
-    </div>
+          <label htmlFor="comment">Comment:</label> */}
+        <textarea
+          id="comment"
+          name="comment"
+          placeholder="Comment"
+          value={formData.comment}
+          onChange={handleChange}
+        />
+        {/* </div> */}
+        <Button text="Send" />
+      </Form>
+    </Container>
   );
 };

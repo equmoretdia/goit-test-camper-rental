@@ -124,7 +124,7 @@ export const CamperDetails = ({
           </FeaturesReviews>
         </FRContainer>
         {showFeatures && (
-          <div style={{ display: 'flex' }}>
+          <div style={{ display: 'flex', gap: '24px', paddingTop: '44px' }}>
             <CamperFeatures
               details={details}
               adults={adults}
@@ -141,7 +141,7 @@ export const CamperDetails = ({
           </div>
         )}
         {showReviews && (
-          <div style={{ display: 'flex' }}>
+          <div style={{ display: 'flex', gap: '24px', paddingTop: '44px' }}>
             <CamperReviews reviews={reviews} />
             <BookingForm />
           </div>

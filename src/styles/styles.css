@@ -51,6 +51,8 @@ address {
   --modal-backdrop: rgba(17, 18, 19, 0.4);
   /*border colors*/
   --card-border-color: #10182833;
+  /*form input colors*/
+  --form-input-color: #10182899;
   /*font families*/
   --font-family: 'Inter', sans-serif;
   /*shadows*/

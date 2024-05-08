@@ -127,24 +127,6 @@ const Feature = styled.li`
   mix-blend-mode: multiply;
 `;
 
-const ShowMore = styled.button`
-  padding: 16px 40px;
-  width: 166px;
-  height: 56px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: -0.01em;
-  color: var(--background);
-  background-color: var(--button);
-  border-radius: 200px;
-  border: none;
-
-  &:hover {
-    background-color: var(--active-button);
-  }
-`;
-
 export {
   Card,
   ImgWrapper,
@@ -162,5 +144,4 @@ export {
   Description,
   FeatureBlock,
   Feature,
-  ShowMore,
 };

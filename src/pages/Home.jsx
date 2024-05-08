@@ -1,13 +1,13 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
+import { Button } from '../components/Button/Button';
 import camperMain from 'images/camper-main.jpg';
 import {
   Header,
   ContentContainer,
   ImgLinkContainer,
   Img,
-  CatalogButton,
   Reason,
   ReasonHeader,
   MotoContainer,
@@ -26,7 +26,7 @@ const Home = () => {
             alt="camper against the backdrop of forest and snow peaks mountains"
           />
           <NavLink to="/catalog">
-            <CatalogButton type="button">Catalog</CatalogButton>
+            <Button text="Catalog" />
           </NavLink>
           <MotoContainer>
             <MotoStart>Celebrate Your Dreams Today, </MotoStart>

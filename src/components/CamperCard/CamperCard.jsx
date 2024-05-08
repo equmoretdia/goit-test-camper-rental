@@ -5,6 +5,7 @@ import { selectFavorites } from '../../redux/selectors';
 import { addFavorite, deleteFavorite } from '../../redux/favoritesSlice';
 import { Modal } from '../Modal/Modal';
 import { CamperDetails } from '../CamperDetails/CamperDetails';
+import { Button } from '../Button/Button';
 import { IconComponent } from '../IconComponent/IconComponent';
 import {
   Card,
@@ -23,7 +24,6 @@ import {
   Description,
   FeatureBlock,
   Feature,
-  ShowMore,
 } from './CamperCardStyles';
 import ac from '../../images/ac.svg';
 
@@ -185,9 +185,7 @@ export const CamperCard = ({ camper }) => {
               }
             })}
           </FeatureBlock>
-          <ShowMore type="button" onClick={toggleModal}>
-            Show more
-          </ShowMore>
+          <Button text="Show more" func={toggleModal} />
         </CardInfo>
       </Card>
       {isModalOpen && (
